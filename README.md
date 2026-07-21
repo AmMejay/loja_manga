@@ -138,7 +138,7 @@ Este projeto foi desenvolvido com o objetivo de praticar conceitos de desenvolvi
 
 ##  Autor
 
-Desenvolvido por **Nicolas Rafael**.
+Desenvolvido por **Nícolas Rafael**.
 
 ---
 
