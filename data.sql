@@ -8,7 +8,9 @@ CREATE TABLE manga (
     volume INT NOT NULL,
     genero VARCHAR(60) NOT NULL,
     descricao VARCHAR(60) NOT NULL,
-    preco DECIMAL(10,2) NOT NULL
+    preco DECIMAL(10,2) NOT NULL,
+    cliente VARCHAR(60) NOT NULL,
+    ativo TINYINT(1) NOT NULL DEFAULT 0
 );
 
 CREATE TABLE loja (
@@ -20,19 +22,18 @@ CREATE TABLE pedido (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_manga INT NOT NULL,
     id_loja INT NOT NULL,
-    ativo BOOLEAN NOT NULL DEFAULT TRUE,
 
     FOREIGN KEY (id_manga) REFERENCES manga(id_manga),
     FOREIGN KEY (id_loja) REFERENCES loja(id_loja)
 );
 
 -- Mangás
-INSERT INTO manga (nome, volume, genero, descricao, preco) VALUES
-('One Piece', 1, 'Aventura', 'Inicio da jornada de Luffy', 39.90),
-('Naruto', 1, 'Acao', 'Naruto busca ser Hokage', 34.90),
-('Attack on Titan', 1, 'Acao', 'Humanidade contra os titas', 44.90),
-('Death Note', 1, 'Suspense', 'Caderno com poder mortal', 42.50),
-('Demon Slayer', 1, 'Fantasia', 'Cacadores de demonios', 37.90);
+INSERT INTO manga (nome, volume, genero, descricao, preco , cliente, ativo) VALUES
+('One Piece', 1, 'Aventura', 'Inicio da jornada de Luffy', 39.90, "Nícolas" , TRUE),
+('Naruto', 1, 'Acao', 'Naruto busca ser Hokage', 34.90, "Bryan", FALSE),
+('Attack on Titan', 1, 'Acao', 'Humanidade contra os titas', 44.90, "Lorenzo", TRUE),
+('Death Note', 1, 'Suspense', 'Caderno com poder mortal', 42.50, "Pablo Guloso", FALSE),
+('Demon Slayer', 1, 'Fantasia', 'Cacadores de demonios', 37.90, "Valter", FALSE);
 
 -- Lojas
 INSERT INTO loja (lugar) VALUES
@@ -41,12 +42,12 @@ INSERT INTO loja (lugar) VALUES
 ('Joinville - SC');
 
 -- Pedidos
-INSERT INTO pedido (id_manga, id_loja, ativo) VALUES
-(1, 1, TRUE),
-(2, 1, FALSE),
-(3, 2, TRUE),
-(4, 3, TRUE),
-(5, 2, FALSE);
+INSERT INTO pedido (id_manga, id_loja) VALUES	
+(1, 1),
+(2, 1),
+(3, 2),
+(4, 3),
+(5, 2);
 
 -- Consultas para teste
 SELECT * FROM manga;
