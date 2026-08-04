@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Roboto,Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+    min-height:100vh;
+    padding:40px;
+}
+
+.table-container{
+    max-width:1100px;
+    margin:0 auto;
+    background:#1e293b;
+    padding:24px;
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#f8fafc;
+    font-size:2rem;
+}
+
+/* ---------- TABELAS ---------- */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#1e293b;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+thead{
+    background:#2563eb;
+}
+
+thead th{
+    padding:18px;
+    color:white;
+    font-size:15px;
+    letter-spacing:.5px;
+}
+
+tbody td{
+    padding:16px;
+    border-bottom:1px solid #334155;
+    text-align:center;
+}
+
+tbody tr{
+    transition:.25s;
+}
+
+tbody tr:nth-child(even){
+    background:#162033;
+}
+
+tbody tr:hover{
+    background:#263548;
+}
+
+/* ---------- BOTÕES ---------- */
+
+a{
+    text-decoration:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+    display:inline-block;
+    margin:2px;
+    transition:.25s;
+    font-weight:bold;
+}
+
+a:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(0,0,0,.4);
+}
+
+a[href*="comprar"]{
+    background:#22c55e;
+}
+
+a[href*="comprar"]:hover{
+    background:#16a34a;
+}
+
+a[href*="edit"]{
+    background:#3b82f6;
+}
+
+a[href*="edit"]:hover{
+    background:#2563eb;
+}
+
+a[href*="delete"]{
+    background:#ef4444;
+}
+
+a[href*="delete"]:hover{
+    background:#dc2626;
+}
+
+/* ---------- FORMULÁRIOS ---------- */
+
+form{
+    max-width:550px;
+    margin:auto;
+    background:#1e293b;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:8px;
+    color:#f1f5f9;
+    font-weight:bold;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:#334155;
+    color:white;
+    font-size:15px;
+    transition:.25s;
+}
+
+input:focus,
+select:focus{
+    border:2px solid #3b82f6;
+    background:#3b4556;
+}
+
+button,
+input[type="submit"]{
+    width:100%;
+    margin-top:28px;
+    padding:14px;
+    background:#2563eb;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* ---------- SCROLL ---------- */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#64748b;
+}
